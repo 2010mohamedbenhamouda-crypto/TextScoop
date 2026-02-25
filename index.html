@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextScooper</title>
+    <link rel="stylesheet" href="Untitled-1.css">
+    
+</head>
+<body id="home">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#scoop">Scoop</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Text Scooper</h1>
+
+    <main>
+        <section id="about">
+            <p>
+                Paste your text and let our tool analyze it. Get insights on sentence length, word repetition, and vocabulary richness.
+            </p>
+        </section>
+
+        <div class="instruction_container">
+            <section id="instruction1">
+                <p>Paste your text here.</p>
+            </section>
+            <section id="instruction2">
+                <p>We analyze your text and share insights about sentence structure, word usage, and style.</p>
+            </section>
+        </div>
+
+        <section id="scoop">
+            <h2>Analyze your text</h2>
+            <textarea id="user-text" rows="8" placeholder="Paste your text here..."></textarea>
+            <br><br>
+            <button type="button" id="analyze-button">Analyze</button>
+            <button type="button" id="clear-button">Clear</button>
+            <div id="char-count">0 characters</div>
+        </section>
+
+        <section id="result-box">
+            <div id="result-content">
+                <p id="ia-detection"></p>
+                <p id="sentence-info"></p>
+                <p id="repetition-info"></p>
+                <p id="vocabulary-info"></p>
+            </div>
+            <button id="copy-result-button">Copy</button>
+        </section>
+
+
+        <section id="dev-message">
+            <p>
+                This tool is still in development, so analysis may not be 100% accurate yet.
+            </p>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2>Text Scooper</h2>
+                <p>Analyze your text with ease and fun.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#scoop">Scoop</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.instagram.com">
+                    <img src="instagram.png" alt="Instagram">
+                </a>
+                <a href="mailto:example@gmail.com">
+                    <img src="gmail.png" alt="Gmail">
+                </a>
+            </div>
+        </div>
+        <p class="footer-copy">© 2026 Text Scooper. All rights reserved.</p>
+    </footer>
+    <script src="script.js" defer></script>
+
+</body>
+</html>

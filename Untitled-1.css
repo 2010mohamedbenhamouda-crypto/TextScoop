@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media(max-width: 780px) {
+    h1 {
+        font-size: 2.4rem;
+    }
+    .instruction_container {
+        flex-direction: column;
+        align-items: center;
+    }
+    #user-text,
+    #result-text {
+        width: 100%;
+    }
+    #section-result {
+        flex-direction: column;
+    }
+}
+
+html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f8fafc);
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.75);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 22px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 42px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #334155;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: color 0.25s ease;
+}
+
+nav ul li a:hover {
+    color: #6366f1;
+}
+
+h1 {
+    text-align: center;
+    margin: 70px 0 36px;
+    font-size: 3.6rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+main {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 44px 28px 90px;
+}
+
+section {
+    scroll-margin-top: 120px;
+    animation: fadeIn 0.6s ease;
+}
+
+#about {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+#about p {
+    max-width: 860px;
+    margin: 0 auto;
+    font-size: 1.24rem;
+    color: #475569;
+}
+
+.instruction_container {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 70px;
+    flex-wrap: wrap;
+}
+
+#instruction1,
+#instruction2 {
+    background: rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 28px 34px;
+    max-width: 470px;
+    color: #1e293b;
+    font-size: 1.08rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#instruction1:hover,
+#instruction2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
+}
+
+#scoop {
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+#scoop h2,
+#section-result h2 {
+    margin-bottom: 22px;
+    font-size: 2rem;
+    color: #334155;
+}
+
+#user-text {
+    width: 100%;
+    max-width: 980px;
+    min-height: 220px;
+    padding: 20px 22px;
+    border-radius: 18px;
+    border: 1px solid #d0d7de;
+    background: #f9fafb;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    resize: vertical;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #0f172a;
+}
+
+#user-text:focus {
+    border-color: #10a37f;
+    box-shadow: 0 0 0 4px rgba(16, 163, 127, 0.2);
+    background-color:#ffffff ;
+}
+
+#user-text::placeholder {
+    color: #9ca3af;
+}
+
+#analyze-button,
+#copy-button,
+#clear-button {
+    margin-top: 20px;
+    padding: 13px 24px;
+    border-radius: 14px;
+    border: none;
+    font-size: 0.98rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+#analyze-button {
+    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    color: #ffffff;
+}
+
+#analyze-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.35);
+}
+
+#copy-button,
+#clear-button {
+    background-color: #e2e8f0;
+    color: #1e293b;
+    margin-left: 10px;
+}
+
+#copy-button:hover,
+#clear-button:hover {
+    background-color: #cbd5e1;
+    transform: translateY(-2px);
+}
+
+#char-count {
+    margin-top: 12px;
+    font-size: 0.95rem;
+    color: #64748b;
+}
+
+#result-box {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 20px 22px;
+    border-radius: 18px;
+    border: 1px solid #e5e7eb;
+    background-color: #f9fafb;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+#result-content {
+    flex: 1;
+    text-align: left;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: #0f172a;
+}
+
+#result-content p {
+    margin-bottom: 8px;
+}
+
+#copy-result-button {
+    background-color: #e5e7eb;
+    border: none;
+    border-radius: 12px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: #1e293b;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+#copy-result-button:hover {
+    background-color: #d1d5db;
+    transform: translateY(-2px)
+}
+
+#dev-message {
+    max-width: 980px;
+    margin: 40px auto 0;
+    padding: 20px 24px;
+    border-radius: 18px;
+    border: 1px solid #e5e7eb;
+    background-color: #f9fafb;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
+    font-size: 1rem;
+    line-height: 1.65;
+    color: #0f172a;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#dev-message:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+#dev-message p {
+    margin: 0;
+}
+
+footer {
+    margin-top: 80px;
+    padding: 30px 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid #e5e7eb;
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+footer p {
+    margin: 6px 0;
+}
+
+footer a {
+    color: #6366f1;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;  
+}
+
+footer a:hover {
+    color: #4f46e5;
+}
