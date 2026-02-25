@@ -32,9 +32,6 @@ It uses a rule-based approach based on several linguistic features such as lexic
 - HTML  
 - CSS  
 - JavaScript  
-- Python  
-- CODEX (used for debugging)
-
 ---
 
 ## 🧪 How It Works
